@@ -1,3 +1,4 @@
+using Fluxor;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using MudBlazor.Services;
@@ -15,6 +16,7 @@ namespace NaturalOne
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
             builder.Services.AddMudServices();
+            builder.Services.AddFluxor(fo => fo.ScanAssemblies(typeof(Program).Assembly));
 
             await builder.Build().RunAsync();
         }
