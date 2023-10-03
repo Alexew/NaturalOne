@@ -6,7 +6,7 @@ namespace NaturalOne.Store
     public record SelectRaceAction(Race Race);
 
     [FeatureState]
-    public record BuilderStore
+    public record BuilderState
     {
         public Race Race { get; init; } = default!;
     }
@@ -14,7 +14,7 @@ namespace NaturalOne.Store
     public static class RaceReducers
     {
         [ReducerMethod]
-        public static BuilderStore ReduceSelectRaceAction(BuilderStore state, SelectRaceAction action)
+        public static BuilderState ReduceSelectRaceAction(BuilderState state, SelectRaceAction action)
         {
             return state with
             {
