@@ -1,12 +1,18 @@
-﻿@inherits LayoutComponentBase
+﻿@inherits FluxorLayout
 
-<MudThemeProvider />
+@inject IDispatcher Dispatcher
+
+<MudThemeProvider @bind-IsDarkMode="@isDarkMode" />
 <MudDialogProvider />
 <MudSnackbarProvider />
 
 <MudLayout>
     <MudAppBar Color="Color.Primary">
-        Natural 1
+        <MudText>Natural 1</MudText>
+        <MudSpacer />
+        <MudIconButton Icon="@(isDarkMode ? Icons.Material.Filled.LightMode : Icons.Material.Filled.DarkMode)"
+                       Color="Color.Inherit"
+                       OnClick="ToggleTheme" />
     </MudAppBar>
     <MudDrawer Open="true" ClipMode="DrawerClipMode.Always">
         <NavMenu />
@@ -17,3 +23,25 @@
         </MudContainer>
     </MudMainContent>
 </MudLayout>
+
+@code {
+    private bool isDarkMode;
+
+    protected override void OnInitialized()
+    {
+        SubscribeToAction<SetThemeAction>(SetTheme);
+        Dispatcher.Dispatch(new LoadThemeAction());
+
+        base.OnInitialized();
+    }
+
+    private void SetTheme(SetThemeAction action)
+    {
+        isDarkMode = action.IsDarkMode;
+    }
+
+    private void ToggleTheme()
+    {
+        Dispatcher.Dispatch(new ToggleThemeAction());
+    }
+}

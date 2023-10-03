@@ -3,6 +3,7 @@ using Fluxor;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using MudBlazor.Services;
+using NaturalOne.Services;
 
 namespace NaturalOne
 {
@@ -19,6 +20,8 @@ namespace NaturalOne
             builder.Services.AddMudServices();
             builder.Services.AddBlazoredLocalStorage();
             builder.Services.AddFluxor(fo => fo.ScanAssemblies(typeof(Program).Assembly));
+
+            builder.Services.AddScoped<IUserSettingsService, UserSettingsService>();
 
             await builder.Build().RunAsync();
         }
