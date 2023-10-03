@@ -1,0 +1,20 @@
+﻿.race-item ::deep.mud-expand-panel-header {
+    padding: 8px 12px;
+}
+
+.race-item.hasnot-subraces ::deep.mud-expand-panel-header {
+    cursor: default;
+}
+
+.race-item ::deep.mud-expand-panel-content {
+    padding: 0 8px 0;
+}
+
+.race-item ::deep.expand-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}

@@ -1,0 +1,26 @@
+﻿@using NaturalOne.Data
+@using NaturalOne.Data.Races
+
+@inherits FluxorComponent
+
+@inject IDispatcher Dispatcher
+@inject IState<BuilderStore> RaceState
+
+<RaceSet ValueChanged="SelectRace">
+    <RaceItem Race="@(new Dwarf())" Subraces="new Race[] { new HillDwarf(), new MountainDwarf() }" />
+    <RaceItem Race="@(new Elf())" Subraces="new Race[] { new HighElf(), new WoodElf() }" />
+    <RaceItem Race="@(new Halfling())" Subraces="new Race[] { new LightfootHalfling(), new StoutHalfling() }" />
+    <RaceItem Race="@(new Human())" Subraces="new Race[] { new Human(), new VariantHuman() }" />
+    <RaceItem Race="@(new Dragonborn())" />
+    <RaceItem Race="@(new Gnome())" Subraces="new Race[] { new RockGnome() }" />
+    <RaceItem Race="@(new HalfElf())" />
+    <RaceItem Race="@(new HalfOrc())" />
+    <RaceItem Race="@(new Tiefling())" />
+</RaceSet>
+
+@code {
+    private void SelectRace(Race race)
+    {
+        Dispatcher.Dispatch(new SelectRaceAction(race));
+    }
+}

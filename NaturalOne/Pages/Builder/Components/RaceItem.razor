@@ -1,0 +1,45 @@
+﻿<div class="race-item @(!HasSubraces ? "hasnot-subraces" : string.Empty)">
+    <MudExpansionPanels Class="ma-2" Elevation="3">
+        <MudExpansionPanel HideIcon="true" @bind-IsExpanded="@IsOpen">
+            <TitleContent>
+                <div class="d-flex align-center">
+                    <MudPaper Class="pa-2">
+                        <MudIcon Icon="@Icons.Material.Outlined.Person4" Size="Size.Medium" />
+                    </MudPaper>
+                    <MudText Typo="Typo.h6" Class="ml-3">@Race.Name</MudText>
+                    @if (HasSubraces)
+                    {
+                        <div class="expand-btn ml-auto">
+                            <MudIcon Icon="@(IsOpen ? Icons.Material.Filled.KeyboardArrowUp : Icons.Material.Filled.KeyboardArrowDown)"
+                                        Size="Size.Large" />
+                        </div>
+                    }
+                    else
+                    {
+                        <MudFab StartIcon="@Icons.Material.Filled.KeyboardArrowRight"
+                                Color="Color.Primary"
+                                Size="Size.Small"
+                                OnClick="@(async () => await OnSelectRaceHandler(Race))"
+                                Class="ml-auto" />
+                    }
+                </div>
+            </TitleContent>
+            <ChildContent>
+                @foreach (var subrace in Subraces)
+                {
+                    <MudPaper Class="ma-2 pa-2 d-flex align-center" Elevation="2">
+                        <MudPaper Class="pa-2">
+                            <MudIcon Icon="@Icons.Material.Filled.Person4" Size="Size.Medium" />
+                        </MudPaper>
+                        <MudText Typo="Typo.h6" Class="ml-3">@subrace.Name</MudText>
+                        <MudFab StartIcon="@Icons.Material.Filled.KeyboardArrowRight"
+                                Color="Color.Primary"
+                                Size="Size.Small"
+                                OnClick="@(async () => await OnSelectRaceHandler(subrace))"
+                                Class="ml-auto" />
+                    </MudPaper>
+                }
+            </ChildContent>
+        </MudExpansionPanel>
+    </MudExpansionPanels>
+</div>
