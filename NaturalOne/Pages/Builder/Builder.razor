@@ -3,5 +3,12 @@
 <PageTitle>Builder</PageTitle>
 
 <MudContainer MaxWidth="MaxWidth.Medium">
-    <RaceStep />
+    <MudTabs Centered="true" PanelClass="pt-6">
+        <MudTabPanel Text="Race">
+            <RaceStep />
+        </MudTabPanel>
+        <MudTabPanel Text="Class">
+            <ClassStep />
+        </MudTabPanel>
+    </MudTabs>
 </MudContainer>
