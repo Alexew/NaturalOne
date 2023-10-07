@@ -1,0 +1,31 @@
+﻿@inherits FluxorComponent
+
+@inject IDispatcher Dispatcher
+@inject IState<BuilderState> BuilderState
+
+<MudCard Elevation="6">
+    <MudCardHeader>
+        <CardHeaderContent>
+            <div class="d-flex">
+                <MudText Typo="Typo.h6">@BuilderState.Value.Race?.Name</MudText>
+                <MudPaper Class="ml-auto pa-2">
+                    <MudIcon Icon="@Icons.Material.Outlined.Person4" Size="Size.Large" />
+                </MudPaper>
+            </div>
+        </CardHeaderContent>
+    </MudCardHeader>
+    <MudCardContent>
+        <MudText>Race description.</MudText>
+        <TraitList />
+    </MudCardContent>
+    <MudCardActions>
+        <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="ChangeRace">Change race</MudButton>
+    </MudCardActions>
+</MudCard>
+
+@code {
+    private void ChangeRace()
+    {
+        Dispatcher.Dispatch(new ChangeRaceAction());
+    }
+}

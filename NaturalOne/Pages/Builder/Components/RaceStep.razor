@@ -1,0 +1,13 @@
+﻿@inherits FluxorComponent
+
+@inject IState<BuilderState> BuilderState
+
+@if (BuilderState.Value.Race is null)
+{
+    <RaceSelector />
+}
+
+@if (BuilderState.Value.Race is not null)
+{
+    <RaceManager />
+}
