@@ -23,10 +23,7 @@ namespace NaturalOne.Services
         {
             var settings = await _localStorage.GetItemAsync<UserSettings>(KEY);
 
-            settings ??= new UserSettings
-            {
-                IsDarkMode = true
-            };
+            settings ??= new UserSettings();
 
             return settings;
         }

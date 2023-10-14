@@ -1,4 +1,7 @@
-﻿namespace NaturalOne.Data
+﻿using Microsoft.Extensions.Localization;
+using NaturalOne.Localization;
+
+namespace NaturalOne.Data
 {
     public abstract class Race
     {
@@ -8,6 +11,7 @@
         {
             _traits = new List<string>();
         }
+        public IStringLocalizer T { get; set; } = Localizer.Instance;
 
         public string Name { get; protected set; } = default!;
         public string Description { get; protected set; } = default!;

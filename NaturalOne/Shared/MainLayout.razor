@@ -10,6 +10,9 @@
     <MudAppBar Color="Color.Primary">
         <MudText>Natural 1</MudText>
         <MudSpacer />
+        <div style="width: 200px;">
+            <CultureSelector />
+        </div>
         <MudIconButton Icon="@(isDarkMode ? Icons.Material.Filled.LightMode : Icons.Material.Filled.DarkMode)"
                        Color="Color.Inherit"
                        OnClick="ToggleTheme" />
@@ -30,7 +33,9 @@
     protected override void OnInitialized()
     {
         SubscribeToAction<SetThemeAction>(SetTheme);
+
         Dispatcher.Dispatch(new LoadThemeAction());
+        Dispatcher.Dispatch(new LoadCultureAction());
 
         base.OnInitialized();
     }

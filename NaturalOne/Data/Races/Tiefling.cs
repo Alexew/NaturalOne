@@ -4,7 +4,7 @@
     {
         public Tiefling()
         {
-            Name = "Tiefling";
+            Name = T["Races.Tiefling.Name"];
 
             AddTrait("Darkvision");
             AddTrait("Hellish Resistance");

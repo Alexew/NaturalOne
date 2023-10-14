@@ -4,7 +4,7 @@
     {
         public Halfling()
         {
-            Name = "Halfling";
+            Name = T["Races.Halfling.Name"];
 
             AddTrait("Lucky");
             AddTrait("Brave");
@@ -16,7 +16,7 @@
     {
         public LightfootHalfling()
         {
-            Name = "Lightfoot Halfling";
+            Name = T["Races.LightfootHalfling.Name"];
 
             AddTrait("Naturally Stealthy");
         }
@@ -26,7 +26,7 @@
     {
         public StoutHalfling()
         {
-            Name = "Stout Halfling";
+            Name = T["Races.StoutHalfling.Name"];
 
             AddTrait("Stout Resilience");
         }

@@ -4,7 +4,7 @@
     {
         public Human()
         {
-            Name = "Human";
+            Name = T["Races.Human.Name"];
         }
     }
 
@@ -12,7 +12,7 @@
     {
         public VariantHuman()
         {
-            Name = "Variant Human";
+            Name = T["Races.VariantHuman.Name"];
 
             AddTrait("Skills");
             AddTrait("Feat");

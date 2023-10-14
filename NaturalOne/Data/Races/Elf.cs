@@ -4,7 +4,7 @@
     {
         public Elf()
         {
-            Name = "Elf";
+            Name = T["Races.Elf.Name"];
 
             AddTrait("Darkvision");
             AddTrait("Keen Senses");
@@ -17,7 +17,7 @@
     {
         public HighElf()
         {
-            Name = "High Elf";
+            Name = T["Races.HighElf.Name"];
 
             AddTrait("Elf Weapon Training");
             AddTrait("Cantrip");
@@ -29,7 +29,7 @@
     {
         public WoodElf()
         {
-            Name = "Wood Elf";
+            Name = T["Races.WoodElf.Name"];
 
             AddTrait("Elf Weapon Training");
             AddTrait("Fleet of Foot");

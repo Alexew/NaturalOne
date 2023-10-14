@@ -4,7 +4,7 @@
     {
         public HalfOrc()
         {
-            Name = "Half-Orc";
+            Name = T["Races.HalfOrc.Name"];
 
             AddTrait("Darkvision");
             AddTrait("Menacing");

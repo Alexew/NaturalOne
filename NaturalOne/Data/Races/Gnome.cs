@@ -4,7 +4,7 @@
     {
         public Gnome()
         {
-            Name = "Gnome";
+            Name = T["Races.Gnome.Name"];
 
             AddTrait("Darkvision");
             AddTrait("Gnome Cunning");
@@ -15,7 +15,7 @@
     {
         public RockGnome()
         {
-            Name = "Rock Gnome";
+            Name = T["Races.RockGnome.Name"];
 
             AddTrait("Artificer’s Lore");
             AddTrait("Tinker");

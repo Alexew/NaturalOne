@@ -1,13 +1,15 @@
 ﻿@page "/builder"
 
+@inject IStringLocalizer<Resource> T
+
 <PageTitle>Builder</PageTitle>
 
 <MudContainer MaxWidth="MaxWidth.Medium">
     <MudTabs Centered="true" PanelClass="pt-6">
-        <MudTabPanel Text="Race">
+        <MudTabPanel Text="@T["Builder.Race.StepTitle"]">
             <RaceStep />
         </MudTabPanel>
-        <MudTabPanel Text="Class">
+        <MudTabPanel Text="@T["Builder.Class.StepTitle"]">
             <ClassStep />
         </MudTabPanel>
     </MudTabs>

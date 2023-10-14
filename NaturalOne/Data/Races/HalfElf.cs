@@ -4,7 +4,7 @@
     {
         public HalfElf()
         {
-            Name = "Half-Elf";
+            Name = T["Races.HalfElf.Name"];
 
             AddTrait("Darkvision");
             AddTrait("Fey Ancestry");

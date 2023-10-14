@@ -1,0 +1,24 @@
+﻿@using System.Globalization;
+
+@inherits FluxorComponent
+
+@inject IDispatcher Dispatcher
+@inject IState<CultureState> CultureState
+@inject NavigationManager NavigationManager
+
+<MudSelect T="CultureInfo" Value="CultureState.Value.Culture" Margin="Margin.Dense" Variant="Variant.Outlined" ValueChanged="SelectCulture">
+    <MudSelectItem Value="@(new CultureInfo("en-US"))">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" height="14" class="mr-1" /> English
+    </MudSelectItem>
+    <MudSelectItem Value="@(new CultureInfo("uk"))">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg" height="14" class="mr-1" /> Українська
+    </MudSelectItem>
+</MudSelect>
+
+@code {
+    private void SelectCulture(CultureInfo culture)
+    {
+        Dispatcher.Dispatch(new SelectCultureAction(culture));
+        NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
+    }
+}

@@ -4,7 +4,7 @@
     {
         public Dwarf()
         {
-            Name = "Dwarf";
+            Name = T["Races.Dwarf.Name"];
 
             AddTrait("Darkvision");
             AddTrait("Dwarven Resilience");
@@ -18,7 +18,7 @@
     {
         public HillDwarf()
         {
-            Name = "Hill Dwarf";
+            Name = T["Races.HillDwarf.Name"];
 
             AddTrait("Dwarven Toughness");
         }
@@ -28,7 +28,7 @@
     {
         public MountainDwarf()
         {
-            Name = "Mountain Dwarf";
+            Name = T["Races.MountainDwarf.Name"];
 
             AddTrait("Dwarven Armor Training");
         }

@@ -4,7 +4,7 @@
     {
         public Dragonborn()
         {
-            Name = "Dragonborn";
+            Name = T["Races.Dragonborn.Name"];
 
             AddTrait("Draconic Ancestry");
             AddTrait("Breath Weapon");
