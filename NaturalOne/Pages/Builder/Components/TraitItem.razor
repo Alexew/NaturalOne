@@ -1,0 +1,33 @@
+﻿@inherits FluxorComponent
+
+@inject IDispatcher Dispatcher
+@inject IState<BuilderState> BuilderState
+
+<MudExpansionPanels Class="mb-2" Elevation="3">
+    <MudExpansionPanel Text="@(Trait.Name)">
+        @Trait.Description
+
+        @foreach (var template in Trait.Templates)
+        {
+            foreach (var editor in template.Editors)
+            {
+                if (editor.Name.Equals("Select"))
+                {
+                    <MudSelect Value="@BuilderState.Value.Traits.FirstOrDefault(x => x.Key == editor.Id).Value" T="string" ValueChanged="@((e) => SelectTrait(e, editor))">
+                        @foreach (var item in editor.SelectItems)
+                        {
+                            <MudSelectItem Value="item.Value">@item.Text</MudSelectItem>
+                        }
+                    </MudSelect>
+                }
+            }
+        }
+    </MudExpansionPanel>
+</MudExpansionPanels>
+
+@code {
+    private void SelectTrait(string value, Models.TraitEditor editor)
+    {
+        Dispatcher.Dispatch(new SelectTraitEditorAction(editor.Id, value));
+    }
+}

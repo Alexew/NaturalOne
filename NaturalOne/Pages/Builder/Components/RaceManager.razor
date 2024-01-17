@@ -16,7 +16,12 @@
     </MudCardHeader>
     <MudCardContent>
         <MudText>Race description.</MudText>
-        <TraitList />
+        <TraitSet>
+            @foreach (var trait in BuilderState.Value.Race.Traits)
+            {
+                <TraitItem Trait="trait" />
+            }
+        </TraitSet>
     </MudCardContent>
     <MudCardActions>
         <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="ChangeRace">Change race</MudButton>

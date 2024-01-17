@@ -4,7 +4,6 @@
 @inherits FluxorComponent
 
 @inject IDispatcher Dispatcher
-@inject IState<BuilderState> RaceState
 
 <RaceSet ValueChanged="SelectRace">
     <RaceItem Race="@(new Dwarf())" Subraces="new Race[] { new HillDwarf(), new MountainDwarf() }" />

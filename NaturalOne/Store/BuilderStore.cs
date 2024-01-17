@@ -5,11 +5,13 @@ namespace NaturalOne.Store
 {
     public record SelectRaceAction(Race Race);
     public record ChangeRaceAction();
+    public record SelectTraitEditorAction(string Key, string Value);
 
     [FeatureState]
     public record BuilderState
     {
         public Race Race { get; init; } = default!;
+        public IDictionary<string, string> Traits { get; init; } = new Dictionary<string, string>();
     }
 
     public static class RaceReducers
@@ -30,6 +32,14 @@ namespace NaturalOne.Store
             {
                 Race = default!
             };
+        }
+
+        [ReducerMethod]
+        public static BuilderState ReducerSelectTraitEditorAction(BuilderState state, SelectTraitEditorAction action)
+        {
+            state.Traits[action.Key] = action.Value;
+
+            return state;
         }
     }
 }
