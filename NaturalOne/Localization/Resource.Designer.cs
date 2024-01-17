@@ -79,6 +79,60 @@ namespace NaturalOne.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Charisma.
+        /// </summary>
+        public static string Enums_Ability_Charisma {
+            get {
+                return ResourceManager.GetString("Enums.Ability.Charisma", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constitution.
+        /// </summary>
+        public static string Enums_Ability_Constitution {
+            get {
+                return ResourceManager.GetString("Enums.Ability.Constitution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dexterity.
+        /// </summary>
+        public static string Enums_Ability_Dexterity {
+            get {
+                return ResourceManager.GetString("Enums.Ability.Dexterity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Intelligence.
+        /// </summary>
+        public static string Enums_Ability_Intelligence {
+            get {
+                return ResourceManager.GetString("Enums.Ability.Intelligence", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Strength.
+        /// </summary>
+        public static string Enums_Ability_Strength {
+            get {
+                return ResourceManager.GetString("Enums.Ability.Strength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wisdom.
+        /// </summary>
+        public static string Enums_Ability_Wisdom {
+            get {
+                return ResourceManager.GetString("Enums.Ability.Wisdom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dragonborn.
         /// </summary>
         public static string Races_Dragonborn_Name {
@@ -228,6 +282,249 @@ namespace NaturalOne.Localization {
         public static string Races_WoodElf_Name {
             get {
                 return ResourceManager.GetString("Races.WoodElf.Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Strength score increases by 2, and your Charisma score increases by 1..
+        /// </summary>
+        public static string Traits_AbilityScoreIncrease_Description_Dragonborn {
+            get {
+                return ResourceManager.GetString("Traits.AbilityScoreIncrease.Description.Dragonborn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Constitution score increases by 2..
+        /// </summary>
+        public static string Traits_AbilityScoreIncrease_Description_Dwarf {
+            get {
+                return ResourceManager.GetString("Traits.AbilityScoreIncrease.Description.Dwarf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Dexterity score increases by 2..
+        /// </summary>
+        public static string Traits_AbilityScoreIncrease_Description_Elf {
+            get {
+                return ResourceManager.GetString("Traits.AbilityScoreIncrease.Description.Elf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Intelligence score increases by 2..
+        /// </summary>
+        public static string Traits_AbilityScoreIncrease_Description_Gnome {
+            get {
+                return ResourceManager.GetString("Traits.AbilityScoreIncrease.Description.Gnome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Charisma score increases by 2, and two other ability scores of your choice increase by 1..
+        /// </summary>
+        public static string Traits_AbilityScoreIncrease_Description_HalfElf {
+            get {
+                return ResourceManager.GetString("Traits.AbilityScoreIncrease.Description.HalfElf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Dexterity score increases by 2..
+        /// </summary>
+        public static string Traits_AbilityScoreIncrease_Description_Halfling {
+            get {
+                return ResourceManager.GetString("Traits.AbilityScoreIncrease.Description.Halfling", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Strength score increases by 2, and your Constitution score increases by 1..
+        /// </summary>
+        public static string Traits_AbilityScoreIncrease_Description_HalfOrc {
+            get {
+                return ResourceManager.GetString("Traits.AbilityScoreIncrease.Description.HalfOrc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Intelligence score increases by 1..
+        /// </summary>
+        public static string Traits_AbilityScoreIncrease_Description_HighElf {
+            get {
+                return ResourceManager.GetString("Traits.AbilityScoreIncrease.Description.HighElf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Wisdom score increases by 1..
+        /// </summary>
+        public static string Traits_AbilityScoreIncrease_Description_HillDwarf {
+            get {
+                return ResourceManager.GetString("Traits.AbilityScoreIncrease.Description.HillDwarf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your ability scores each increase by 1..
+        /// </summary>
+        public static string Traits_AbilityScoreIncrease_Description_Human {
+            get {
+                return ResourceManager.GetString("Traits.AbilityScoreIncrease.Description.Human", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Charisma score increases by 1..
+        /// </summary>
+        public static string Traits_AbilityScoreIncrease_Description_LightfootHalfling {
+            get {
+                return ResourceManager.GetString("Traits.AbilityScoreIncrease.Description.LightfootHalfling", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Strength score increases by 2..
+        /// </summary>
+        public static string Traits_AbilityScoreIncrease_Description_MountainDwarf {
+            get {
+                return ResourceManager.GetString("Traits.AbilityScoreIncrease.Description.MountainDwarf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Constitution score increases by 1..
+        /// </summary>
+        public static string Traits_AbilityScoreIncrease_Description_RockGnome {
+            get {
+                return ResourceManager.GetString("Traits.AbilityScoreIncrease.Description.RockGnome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Constitution score increases by 1..
+        /// </summary>
+        public static string Traits_AbilityScoreIncrease_Description_StoutHalfling {
+            get {
+                return ResourceManager.GetString("Traits.AbilityScoreIncrease.Description.StoutHalfling", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Intelligence score increases by 1, and your Charisma score increases by 2..
+        /// </summary>
+        public static string Traits_AbilityScoreIncrease_Description_Tiefling {
+            get {
+                return ResourceManager.GetString("Traits.AbilityScoreIncrease.Description.Tiefling", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Two different ability scores of your choice increase by 1..
+        /// </summary>
+        public static string Traits_AbilityScoreIncrease_Description_VariantHuman {
+            get {
+                return ResourceManager.GetString("Traits.AbilityScoreIncrease.Description.VariantHuman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Wisdom score increases by 1..
+        /// </summary>
+        public static string Traits_AbilityScoreIncrease_Description_WoodElf {
+            get {
+                return ResourceManager.GetString("Traits.AbilityScoreIncrease.Description.WoodElf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ability Score Increase.
+        /// </summary>
+        public static string Traits_AbilityScoreIncrease_Name {
+            get {
+                return ResourceManager.GetString("Traits.AbilityScoreIncrease.Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Age.
+        /// </summary>
+        public static string Traits_Age_Name {
+            get {
+                return ResourceManager.GetString("Traits.Age.Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alignment.
+        /// </summary>
+        public static string Traits_Alignment_Name {
+            get {
+                return ResourceManager.GetString("Traits.Alignment.Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Languages.
+        /// </summary>
+        public static string Traits_Languages_Name {
+            get {
+                return ResourceManager.GetString("Traits.Languages.Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Size.
+        /// </summary>
+        public static string Traits_Size_Name {
+            get {
+                return ResourceManager.GetString("Traits.Size.Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your base walking speed is {0} feet..
+        /// </summary>
+        public static string Traits_Speed_Description {
+            get {
+                return ResourceManager.GetString("Traits.Speed.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your base walking speed is 25 feet. Your speed is not reduced by wearing heavy armor..
+        /// </summary>
+        public static string Traits_Speed_Description_Dwarf {
+            get {
+                return ResourceManager.GetString("Traits.Speed.Description.Dwarf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your base walking speed increases to 35 feet..
+        /// </summary>
+        public static string Traits_Speed_Description_WoodElf {
+            get {
+                return ResourceManager.GetString("Traits.Speed.Description.WoodElf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Speed.
+        /// </summary>
+        public static string Traits_Speed_Name {
+            get {
+                return ResourceManager.GetString("Traits.Speed.Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fleet o f Foot.
+        /// </summary>
+        public static string Traits_Speed_Name_WoodElf {
+            get {
+                return ResourceManager.GetString("Traits.Speed.Name.WoodElf", resourceCulture);
             }
         }
     }

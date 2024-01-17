@@ -123,6 +123,24 @@
   <data name="Builder.Race.StepTitle" xml:space="preserve">
     <value>Race</value>
   </data>
+  <data name="Enums.Ability.Charisma" xml:space="preserve">
+    <value>Charisma</value>
+  </data>
+  <data name="Enums.Ability.Constitution" xml:space="preserve">
+    <value>Constitution</value>
+  </data>
+  <data name="Enums.Ability.Dexterity" xml:space="preserve">
+    <value>Dexterity</value>
+  </data>
+  <data name="Enums.Ability.Intelligence" xml:space="preserve">
+    <value>Intelligence</value>
+  </data>
+  <data name="Enums.Ability.Strength" xml:space="preserve">
+    <value>Strength</value>
+  </data>
+  <data name="Enums.Ability.Wisdom" xml:space="preserve">
+    <value>Wisdom</value>
+  </data>
   <data name="Races.Dragonborn.Name" xml:space="preserve">
     <value>Dragonborn</value>
   </data>
@@ -173,5 +191,86 @@
   </data>
   <data name="Races.WoodElf.Name" xml:space="preserve">
     <value>Wood Elf</value>
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.Dragonborn" xml:space="preserve">
+    <value>Your Strength score increases by 2, and your Charisma score increases by 1.</value>
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.Dwarf" xml:space="preserve">
+    <value>Your Constitution score increases by 2.</value>
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.Elf" xml:space="preserve">
+    <value>Your Dexterity score increases by 2.</value>
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.Gnome" xml:space="preserve">
+    <value>Your Intelligence score increases by 2.</value>
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.HalfElf" xml:space="preserve">
+    <value>Your Charisma score increases by 2, and two other ability scores of your choice increase by 1.</value>
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.Halfling" xml:space="preserve">
+    <value>Your Dexterity score increases by 2.</value>
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.HalfOrc" xml:space="preserve">
+    <value>Your Strength score increases by 2, and your Constitution score increases by 1.</value>
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.HighElf" xml:space="preserve">
+    <value>Your Intelligence score increases by 1.</value>
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.HillDwarf" xml:space="preserve">
+    <value>Your Wisdom score increases by 1.</value>
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.Human" xml:space="preserve">
+    <value>Your ability scores each increase by 1.</value>
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.LightfootHalfling" xml:space="preserve">
+    <value>Your Charisma score increases by 1.</value>
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.MountainDwarf" xml:space="preserve">
+    <value>Your Strength score increases by 2.</value>
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.RockGnome" xml:space="preserve">
+    <value>Your Constitution score increases by 1.</value>
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.StoutHalfling" xml:space="preserve">
+    <value>Your Constitution score increases by 1.</value>
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.Tiefling" xml:space="preserve">
+    <value>Your Intelligence score increases by 1, and your Charisma score increases by 2.</value>
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.VariantHuman" xml:space="preserve">
+    <value>Two different ability scores of your choice increase by 1.</value>
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.WoodElf" xml:space="preserve">
+    <value>Your Wisdom score increases by 1.</value>
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Name" xml:space="preserve">
+    <value>Ability Score Increase</value>
+  </data>
+  <data name="Traits.Age.Name" xml:space="preserve">
+    <value>Age</value>
+  </data>
+  <data name="Traits.Alignment.Name" xml:space="preserve">
+    <value>Alignment</value>
+  </data>
+  <data name="Traits.Languages.Name" xml:space="preserve">
+    <value>Languages</value>
+  </data>
+  <data name="Traits.Size.Name" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Traits.Speed.Description" xml:space="preserve">
+    <value>Your base walking speed is {0} feet.</value>
+  </data>
+  <data name="Traits.Speed.Description.Dwarf" xml:space="preserve">
+    <value>Your base walking speed is 25 feet. Your speed is not reduced by wearing heavy armor.</value>
+  </data>
+  <data name="Traits.Speed.Description.WoodElf" xml:space="preserve">
+    <value>Your base walking speed increases to 35 feet.</value>
+  </data>
+  <data name="Traits.Speed.Name" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="Traits.Speed.Name.WoodElf" xml:space="preserve">
+    <value>Fleet o f Foot</value>
   </data>
 </root>

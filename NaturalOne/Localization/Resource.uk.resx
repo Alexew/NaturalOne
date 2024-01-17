@@ -123,6 +123,24 @@
   <data name="Builder.Race.StepTitle" xml:space="preserve">
     <value>Раса</value>
   </data>
+  <data name="Enums.Ability.Charisma" xml:space="preserve">
+    <value>Харизма</value>
+  </data>
+  <data name="Enums.Ability.Constitution" xml:space="preserve">
+    <value>Статура</value>
+  </data>
+  <data name="Enums.Ability.Dexterity" xml:space="preserve">
+    <value>Спритність</value>
+  </data>
+  <data name="Enums.Ability.Intelligence" xml:space="preserve">
+    <value>Інтелект</value>
+  </data>
+  <data name="Enums.Ability.Strength" xml:space="preserve">
+    <value>Сила</value>
+  </data>
+  <data name="Enums.Ability.Wisdom" xml:space="preserve">
+    <value>Мудрість</value>
+  </data>
   <data name="Races.Dragonborn.Name" xml:space="preserve">
     <value>Драконороджений</value>
   </data>
@@ -173,5 +191,86 @@
   </data>
   <data name="Races.WoodElf.Name" xml:space="preserve">
     <value>Лісовий Ельф</value>
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.Dragonborn" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.Dwarf" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.Elf" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.Gnome" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.HalfElf" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.Halfling" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.HalfOrc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.HighElf" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.HillDwarf" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.Human" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.LightfootHalfling" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.MountainDwarf" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.RockGnome" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.StoutHalfling" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.Tiefling" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.VariantHuman" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Description.WoodElf" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.AbilityScoreIncrease.Name" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.Age.Name" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.Alignment.Name" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.Languages.Name" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.Size.Name" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.Speed.Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.Speed.Description.Dwarf" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.Speed.Description.WoodElf" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.Speed.Name" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Traits.Speed.Name.WoodElf" xml:space="preserve">
+    <value />
   </data>
 </root>
