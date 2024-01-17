@@ -1,4 +1,6 @@
-﻿namespace NaturalOne.Data.Races
+﻿using NaturalOne.Data.Traits;
+
+namespace NaturalOne.Data.Races
 {
     public class Halfling : Race
     {
@@ -6,9 +8,13 @@
         {
             Name = T["Races.Halfling.Name"];
 
-            AddTrait("Lucky");
-            AddTrait("Brave");
-            AddTrait("Halfling Nimbleness");
+            var abilityTrait = new AbilityScoreIncreaseTrait(Ability.Dexterity, 2)
+            {
+                Description = T["Traits.AbilityScoreIncrease.Description.Halfling"]
+            };
+
+            AddTrait(abilityTrait);
+            AddTrait(new SpeedTrait(25));
         }
     }
 
@@ -18,7 +24,12 @@
         {
             Name = T["Races.LightfootHalfling.Name"];
 
-            AddTrait("Naturally Stealthy");
+            var abilityTrait = new AbilityScoreIncreaseTrait(Ability.Charisma, 1)
+            {
+                Description = T["Traits.AbilityScoreIncrease.Description.LightfootHalfling"]
+            };
+
+            AddTrait(abilityTrait);
         }
     }
 
@@ -28,7 +39,12 @@
         {
             Name = T["Races.StoutHalfling.Name"];
 
-            AddTrait("Stout Resilience");
+            var abilityTrait = new AbilityScoreIncreaseTrait(Ability.Constitution, 1)
+            {
+                Description = T["Traits.AbilityScoreIncrease.Description.StoutHalfling"]
+            };
+
+            AddTrait(abilityTrait);
         }
     }
 }

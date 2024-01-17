@@ -1,4 +1,6 @@
-﻿namespace NaturalOne.Data.Races
+﻿using NaturalOne.Data.Traits;
+
+namespace NaturalOne.Data.Races
 {
     public class Dragonborn : Race
     {
@@ -6,9 +8,14 @@
         {
             Name = T["Races.Dragonborn.Name"];
 
-            AddTrait("Draconic Ancestry");
-            AddTrait("Breath Weapon");
-            AddTrait("Damage Resistance");
+            var abilities = new Dictionary<Ability, int> { { Ability.Strength, 2 }, { Ability.Charisma, 1 } };
+            var abilityTrait = new AbilityScoreIncreaseTrait(abilities)
+            {
+                Description = T["Traits.AbilityScoreIncrease.Description.Dragonborn"]
+            };
+
+            AddTrait(abilityTrait);
+            AddTrait(new SpeedTrait(30));
         }
     }
 }

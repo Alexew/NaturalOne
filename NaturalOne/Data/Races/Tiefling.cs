@@ -1,4 +1,6 @@
-﻿namespace NaturalOne.Data.Races
+﻿using NaturalOne.Data.Traits;
+
+namespace NaturalOne.Data.Races
 {
     public class Tiefling : Race
     {
@@ -6,9 +8,14 @@
         {
             Name = T["Races.Tiefling.Name"];
 
-            AddTrait("Darkvision");
-            AddTrait("Hellish Resistance");
-            AddTrait("Infernal Legacy");
+            var abilities = new Dictionary<Ability, int> { { Ability.Intelligence, 1 }, { Ability.Charisma, 2 } };
+            var abilityTrait = new AbilityScoreIncreaseTrait(abilities)
+            {
+                Description = T["Traits.AbilityScoreIncrease.Description.Tiefling"]
+            };
+
+            AddTrait(abilityTrait);
+            AddTrait(new SpeedTrait(30));
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace NaturalOne.Data.Races
+﻿using NaturalOne.Data.Traits;
+
+namespace NaturalOne.Data.Races
 {
     public class Dwarf : Race
     {
@@ -6,11 +8,13 @@
         {
             Name = T["Races.Dwarf.Name"];
 
-            AddTrait("Darkvision");
-            AddTrait("Dwarven Resilience");
-            AddTrait("Dwarven Combat Training");
-            AddTrait("Tool Proficiency");
-            AddTrait("Stonecunning");
+            var abilityTrait = new AbilityScoreIncreaseTrait(Ability.Constitution, 2)
+            {
+                Description = T["Traits.AbilityScoreIncrease.Description.Dwarf"]
+            };
+
+            AddTrait(abilityTrait);
+            AddTrait(new SpeedTrait(25, description: T["Traits.Speed.Description.Dwarf"]));
         }
     }
 
@@ -20,7 +24,12 @@
         {
             Name = T["Races.HillDwarf.Name"];
 
-            AddTrait("Dwarven Toughness");
+            var abilityTrait = new AbilityScoreIncreaseTrait(Ability.Wisdom, 1)
+            {
+                Description = T["Traits.AbilityScoreIncrease.Description.HillDwarf"]
+            };
+
+            AddTrait(abilityTrait);
         }
     }
 
@@ -30,7 +39,12 @@
         {
             Name = T["Races.MountainDwarf.Name"];
 
-            AddTrait("Dwarven Armor Training");
+            var abilityTrait = new AbilityScoreIncreaseTrait(Ability.Strength, 2)
+            {
+                Description = T["Traits.AbilityScoreIncrease.Description.MountainDwarf"]
+            };
+
+            AddTrait(abilityTrait);
         }
     }
 }

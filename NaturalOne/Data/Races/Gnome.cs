@@ -1,4 +1,6 @@
-﻿namespace NaturalOne.Data.Races
+﻿using NaturalOne.Data.Traits;
+
+namespace NaturalOne.Data.Races
 {
     public class Gnome : Race
     {
@@ -6,19 +8,28 @@
         {
             Name = T["Races.Gnome.Name"];
 
-            AddTrait("Darkvision");
-            AddTrait("Gnome Cunning");
+            var abilityTrait = new AbilityScoreIncreaseTrait(Ability.Intelligence, 2)
+            {
+                Description = T["Traits.AbilityScoreIncrease.Description.Gnome"]
+            };
+
+            AddTrait(abilityTrait);
+            AddTrait(new SpeedTrait(25));
         }
     }
 
-    public class RockGnome : Race
+    public class RockGnome : Gnome
     {
         public RockGnome()
         {
             Name = T["Races.RockGnome.Name"];
 
-            AddTrait("Artificer’s Lore");
-            AddTrait("Tinker");
+            var abilityTrait = new AbilityScoreIncreaseTrait(Ability.Constitution, 1)
+            {
+                Description = T["Traits.AbilityScoreIncrease.Description.RockGnome"]
+            };
+
+            AddTrait(abilityTrait);
         }
     }
 }

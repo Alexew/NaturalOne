@@ -1,4 +1,6 @@
-﻿namespace NaturalOne.Data.Races
+﻿using NaturalOne.Data.Traits;
+
+namespace NaturalOne.Data.Races
 {
     public class Elf : Race
     {
@@ -6,10 +8,13 @@
         {
             Name = T["Races.Elf.Name"];
 
-            AddTrait("Darkvision");
-            AddTrait("Keen Senses");
-            AddTrait("Fey Ancestry");
-            AddTrait("Trance");
+            var abilityTrait = new AbilityScoreIncreaseTrait(Ability.Dexterity, 2)
+            {
+                Description = T["Traits.AbilityScoreIncrease.Description.Elf"]
+            };
+
+            AddTrait(abilityTrait);
+            AddTrait(new SpeedTrait(30));
         }
     }
 
@@ -19,9 +24,12 @@
         {
             Name = T["Races.HighElf.Name"];
 
-            AddTrait("Elf Weapon Training");
-            AddTrait("Cantrip");
-            AddTrait("Extra Language");
+            var abilityTrait = new AbilityScoreIncreaseTrait(Ability.Intelligence, 1)
+            {
+                Description = T["Traits.AbilityScoreIncrease.Description.HighElf"]
+            };
+
+            AddTrait(abilityTrait);
         }
     }
 
@@ -31,9 +39,13 @@
         {
             Name = T["Races.WoodElf.Name"];
 
-            AddTrait("Elf Weapon Training");
-            AddTrait("Fleet of Foot");
-            AddTrait("Mask of the Wild");
+            var abilityTrait = new AbilityScoreIncreaseTrait(Ability.Wisdom, 1)
+            {
+                Description = T["Traits.AbilityScoreIncrease.Description.WoodElf"]
+            };
+
+            AddTrait(abilityTrait);
+            AddTrait(new SpeedTrait(35, T["Traits.Speed.Name.WoodElf"], T["Traits.Speed.Description.WoodElf"]));
         }
     }
 }
