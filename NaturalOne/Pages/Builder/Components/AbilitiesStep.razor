@@ -1,0 +1,39 @@
+﻿@using NaturalOne.Data
+
+@inherits FluxorComponent
+
+@inject IState<BuilderState> BuilderState
+@inject IStringLocalizer<Resource> T
+@inject IDispatcher Dispatcher
+
+<MudPaper Class="pa-2 ma-2">
+    <MudText Typo="Typo.h5">Points remaining @BuilderState.Value.PointsRemaining/27</MudText>
+</MudPaper>
+<div class="d-flex justify-center">
+    @foreach (var ability in BuilderState.Value.AbilityScore)
+    {
+        var disabledSub = ability.Value == 8;
+        var disabledAdd = ability.Value == 15 || BuilderState.Value.PointsRemaining == 0 || (ability.Value == 14 && BuilderState.Value.PointsRemaining < 2);
+
+        <MudPaper Class="pa-2 ma-2 ability-score-block">
+            <MudText Align="Align.Center" Typo="Typo.h6">@ability.Key.GetLocalizedEnum()</MudText>
+            <div class="d-flex justify-space-between align-center">
+                <MudIconButton OnClick="@(() => SubAbility(ability.Key))" Disabled="disabledSub" Icon="@Icons.Material.Filled.Remove"></MudIconButton>
+                @ability.Value
+                <MudIconButton OnClick="@(() => AddAbility(ability.Key))" Disabled="disabledAdd" Icon="@Icons.Material.Filled.Add"></MudIconButton>
+            </div>
+        </MudPaper>
+    }
+</div>
+
+@code {
+    private void SubAbility(Ability ability)
+    {
+        Dispatcher.Dispatch(new SubAbilityScoreAction(ability));
+    }
+
+    private void AddAbility(Ability ability)
+    {
+        Dispatcher.Dispatch(new AddAbilityScoreAction(ability));
+    }
+}

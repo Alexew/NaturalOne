@@ -61,6 +61,15 @@ namespace NaturalOne.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Abilities.
+        /// </summary>
+        public static string Builder_Abilities_StepTitle {
+            get {
+                return ResourceManager.GetString("Builder.Abilities.StepTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Class.
         /// </summary>
         public static string Builder_Class_StepTitle {
